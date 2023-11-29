@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-//Schema for one Blog entry
+//Schema for one Blog entry in MONGODB
 const blogSchema = new Schema({
     title: {
         type: String,
