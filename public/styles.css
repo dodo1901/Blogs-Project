@@ -1,0 +1,189 @@
+/* Main Content */
+body{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+p,h1,h2,h3,a,ul{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid darkgray;
+    text-transform: uppercase;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+nav li{
+    list-style-type: none;
+    margin-left: 20px;
+}
+nav h1{
+    font-size: 3em;
+}
+nav p, nav a{
+    color: rgb(75, 75, 75);
+    font-weight: 300;
+}
+
+/* Footer CSS */
+footer{
+    color: black;
+    margin-left: 20px;
+    font-size: 16px;
+}
+.buttonFooter {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.1s; 
+}
+.buttonFooter:hover {
+    background-color: darkgray; 
+}
+
+
+h2{
+    margin-bottom: 40px;
+}
+h3{
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+.content{
+    margin-left: 20px;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    margin-bottom: 40px; 
+}
+
+.profilePicture{
+    width: 140px;
+    margin-top: 30px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+
+/* Index styles of Blogposts */
+.blogs a{
+    display: block;
+    margin: 40px 0;
+    padding-left: 30px;
+    border-left: 6px solid blue;
+}
+
+.blogs a:hover h3{
+    color: darkgray;
+}
+
+
+/* Details section and Delete button */
+
+.details{
+    position: relative; 
+}
+
+.blog-body{
+    border: 1px solid black;
+    padding: 10px;
+    min-height: 100px;
+    max-height: 300px;
+    border-radius: 5px;
+    background-color: lightgrey;
+    max-width: 30%;
+    overflow-y: auto;
+    white-space: normal;
+    overflow-x: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.delete{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: gray;
+    color: white; 
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s
+}
+
+
+.delete:hover{
+    cursor: pointer;
+    background-color: darkgray;
+}
+
+
+.create-blog form{
+    max-width: 400px;
+    margin: 0 auto;
+    
+}
+
+/* Create Blog Page */
+.create-blog input,
+.create-blog textarea{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px
+    
+}
+.create-blog label{
+    display: block;
+    margin-top: 24px;
+}
+
+textarea{
+    height: 120px;
+}
+.create-blog button{
+    margin-top: 20px;
+    background: gray;
+    color: white;
+    padding: 6px;
+    border-radius: 5px;
+    border: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0,3s;
+}
+
+.create-blog button:hover{
+    background-color: darkgray;
+}
+
+/* For error page */
+#ERROR{
+    margin-bottom: 50px;
+}
+

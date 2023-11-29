@@ -1,0 +1,38 @@
+<!-- Code for page when looking at a comment in detail -->
+<htm lang="en">
+    <%- include('partials/head.ejs') %>
+<body>
+
+    <%- include('partials/nav.ejs') %>
+
+    <div class = 'details content'>
+        <h2><%= blog.title %></h2>
+        <div class="blog-body">
+            <p><%= blog.body %></p>
+        </div>
+        <a class="delete" data-doc="<%=blog._id %>">delete</a>
+    </div>
+
+    
+    <script>
+        // Handles Delete Functionality
+        const trash = document.querySelector('a.delete')
+        // When delete clicked execute:
+        trash.addEventListener('click', (e) => { 
+            const endpoint = `/blogs/${trash.dataset.doc}`
+
+            fetch(endpoint, {
+                method: 'DELETE'
+            })
+            .then((response)=>{
+                // Parse the JSON response
+                response.json()
+                .then((data)=> window.location.href = data.redirect) // Redirects back to main page after clicking delete
+
+            })
+            .catch((err)=> console.log(err))
+        })
+    </script>
+
+</body>
+</html>
